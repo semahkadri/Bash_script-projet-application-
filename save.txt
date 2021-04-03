@@ -1,0 +1,197 @@
+ines-virtualbox
+    description: Computer
+    bits: 64 bits
+    fonctionnalités: vsyscall32
+  *-core
+       description: Motherboard
+       identifiant matériel: 0
+     *-memory
+          description: Mémoire système
+          identifiant matériel: 0
+          taille: 2GiB
+     *-cpu
+          produit: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+          fabricant: Intel Corp.
+          identifiant matériel: 1
+          information bus: cpu@0
+          bits: 64 bits
+          fonctionnalités: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d
+     *-pci
+          description: Host bridge
+          produit: 440FX - 82441FX PMC [Natoma]
+          fabricant: Intel Corporation
+          identifiant matériel: 100
+          information bus: pci@0000:00:00.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+        *-isa
+             description: ISA bridge
+             produit: 82371SB PIIX3 ISA [Natoma/Triton II]
+             fabricant: Intel Corporation
+             identifiant matériel: 1
+             information bus: pci@0000:00:01.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: isa bus_master
+             configuration : latency=0
+        *-ide
+             description: IDE interface
+             produit: 82371AB/EB/MB PIIX4 IDE
+             fabricant: Intel Corporation
+             identifiant matériel: 1.1
+             information bus: pci@0000:00:01.1
+             version: 01
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ide isa_compat_mode pci_native_mode bus_master
+             configuration : driver=ata_piix latency=64
+             ressources : irq:0 portE/S:1f0(taille=8) portE/S:3f6 portE/S:170(taille=8) portE/S:376 portE/S:d000(taille=16)
+        *-display
+             description: VGA compatible controller
+             produit: SVGA II Adapter
+             fabricant: VMware
+             identifiant matériel: 2
+             information bus: pci@0000:00:02.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: vga_controller bus_master rom
+             configuration : driver=vmwgfx latency=64
+             ressources : irq:18 portE/S:d010(taille=16) mémoire:e0000000-e0ffffff mémoire:f0000000-f01fffff mémoire:c0000-dffff
+        *-network
+             description: Ethernet interface
+             produit: 82540EM Gigabit Ethernet Controller
+             fabricant: Intel Corporation
+             identifiant matériel: 3
+             information bus: pci@0000:00:03.0
+             nom logique: enp0s3
+             version: 02
+             numéro de série: 08:00:27:6f:3e:0f
+             taille: 1Gbit/s
+             capacité: 1Gbit/s
+             bits: 32 bits
+             horloge: 66MHz
+             fonctionnalités: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration : autonegotiation=on broadcast=yes driver=e1000 driverversion=7.3.21-k8-NAPI duplex=full ip=10.0.2.15 latency=64 link=yes mingnt=255 multicast=yes port=twisted pair speed=1Gbit/s
+             ressources : irq:19 mémoire:f0200000-f021ffff portE/S:d020(taille=8)
+        *-generic
+             description: System peripheral
+             produit: VirtualBox Guest Service
+             fabricant: InnoTek Systemberatung GmbH
+             identifiant matériel: 4
+             information bus: pci@0000:00:04.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             configuration : driver=vboxguest latency=0
+             ressources : irq:20 portE/S:d040(taille=32) mémoire:f0400000-f07fffff mémoire:f0800000-f0803fff
+        *-multimedia
+             description: Multimedia audio controller
+             produit: 82801AA AC'97 Audio Controller
+             fabricant: Intel Corporation
+             identifiant matériel: 5
+             information bus: pci@0000:00:05.0
+             version: 01
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: bus_master
+             configuration : driver=snd_intel8x0 latency=64
+             ressources : irq:21 portE/S:d100(taille=256) portE/S:d200(taille=64)
+        *-usb
+             description: USB controller
+             produit: KeyLargo/Intrepid USB
+             fabricant: Apple Inc.
+             identifiant matériel: 6
+             information bus: pci@0000:00:06.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ohci bus_master cap_list
+             configuration : driver=ohci-pci latency=64
+             ressources : irq:22 mémoire:f0804000-f0804fff
+        *-bridge
+             description: Bridge
+             produit: 82371AB/EB/MB PIIX4 ACPI
+             fabricant: Intel Corporation
+             identifiant matériel: 7
+             information bus: pci@0000:00:07.0
+             version: 08
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: bridge
+             configuration : driver=piix4_smbus latency=0
+             ressources : irq:9
+        *-sata
+             description: SATA controller
+             produit: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+             fabricant: Intel Corporation
+             identifiant matériel: d
+             information bus: pci@0000:00:0d.0
+             version: 02
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: sata ahci_1.0 bus_master cap_list
+             configuration : driver=ahci latency=64
+             ressources : irq:21 portE/S:d240(taille=8) portE/S:d248(taille=4) portE/S:d250(taille=8) portE/S:d258(taille=4) portE/S:d260(taille=16) mémoire:f0806000-f0807fff
+     *-pnp00:00
+          produit: PnP device PNP0303
+          identifiant matériel: 2
+          fonctionnalités: pnp
+          configuration : driver=i8042 kbd
+     *-pnp00:01
+          produit: PnP device PNP0f03
+          identifiant matériel: 3
+          fonctionnalités: pnp
+          configuration : driver=i8042 aux
+     *-scsi
+          identifiant matériel: 4
+          nom logique: scsi1
+          fonctionnalités: emulated
+        *-cdrom
+             description: DVD reader
+             produit: CD-ROM
+             fabricant: VBOX
+             identifiant matériel: 0.0.0
+             information bus: scsi@1:0.0.0
+             nom logique: /dev/cdrom
+             nom logique: /dev/dvd
+             nom logique: /dev/sr0
+             version: 1.0
+             fonctionnalités: removable audio dvd
+             configuration : ansiversion=5 status=nodisc
+Architecture :                          x86_64
+Mode(s) opératoire(s) des processeurs : 32-bit, 64-bit
+Boutisme :                              Little Endian
+Address sizes:                          39 bits physical, 48 bits virtual
+Processeur(s) :                         1
+Liste de processeur(s) en ligne :       0
+Thread(s) par cœur :                    1
+Cœur(s) par socket :                    1
+Socket(s) :                             1
+Nœud(s) NUMA :                          1
+Identifiant constructeur :              GenuineIntel
+Famille de processeur :                 6
+Modèle :                                142
+Nom de modèle :                         Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+Révision :                              9
+Vitesse du processeur en MHz :          2904.000
+BogoMIPS :                              5808.00
+Constructeur d'hyperviseur :            KVM
+Type de virtualisation :                complet
+Cache L1d :                             32 KiB
+Cache L1i :                             32 KiB
+Cache L2 :                              256 KiB
+Cache L3 :                              4 MiB
+Nœud NUMA 0 de processeur(s) :          0
+Vulnerability Itlb multihit:            KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                     Mitigation; PTE Inversion
+Vulnerability Mds:                      Mitigation; Clear CPU buffers; SMT Host state unknown
+Vulnerability Meltdown:                 Mitigation; PTI
+Vulnerability Spec store bypass:        Vulnerable
+Vulnerability Spectre v1:               Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:               Mitigation; Full generic retpoline, STIBP disabled, RSB filling
+Vulnerability Srbds:                    Unknown: Dependent on hypervisor status
+Vulnerability Tsx async abort:          Not affected
+Drapaux :                               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d

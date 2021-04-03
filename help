@@ -1,0 +1,7 @@
+CE DOCUMENT VOUS PERMETTRA DE MIEUX COMPRENDRE LES FONCTIONNALITÉS DE 
+L'APPLICATION AFIN DE POUVOIR MIEUX LA MANIPULER :
+
+-w : pour executer la commande lshw '
+-u : pour executer la commande lscpu '
+-help : pour afficher le manuel '
+-save : pour enregistrer'

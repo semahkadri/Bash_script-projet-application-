@@ -1,0 +1,249 @@
+ines-virtualbox
+    description: Project-Id-Version: @(#) $Id$Report-Msgid-Bugs-To: PO-Revision-Date: 2020-04-03 08:20+0000Last-Translator: Lyonel Vincent <Unknown>Language-Team: MIME-Version: 1.0Content-Type: text/plain; charset=UTF-8Content-Transfer-Encoding: 8bitX-Launchpad-Export-Date: 2020-10-15 22:04+0000X-Generator: Launchpad (build 781851f4dc11c93bc506eb54e6a0d35c919a1ce6)
+    produit: VirtualBox
+    fabricant: innotek GmbH
+    version: 1.2
+    numéro de série: 0
+    bits: 64 bits
+    fonctionnalités: smbios-2.5 dmi-2.5 vsyscall32
+    configuration : family=Virtual Machine uuid=1A87462F-A739-E94F-A1E6-5861F84BCE11
+  *-core
+       description: Carte mère
+       produit: VirtualBox
+       fabricant: Oracle Corporation
+       identifiant matériel: 0
+       version: 1.2
+       numéro de série: 0
+     *-firmware
+          description: BIOS
+          fabricant: innotek GmbH
+          identifiant matériel: 0
+          version: VirtualBox
+          date: 12/01/2006
+          taille: 128KiB
+          capacité: 128KiB
+          fonctionnalités: isa pci cdboot bootselect int9keyboard int10video acpi
+     *-memory
+          description: Mémoire système
+          identifiant matériel: 1
+          taille: 2GiB
+     *-cpu
+          produit: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+          fabricant: Intel Corp.
+          identifiant matériel: 2
+          information bus: cpu@0
+          bits: 64 bits
+          fonctionnalités: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d
+     *-pci
+          description: Host bridge
+          produit: 440FX - 82441FX PMC [Natoma]
+          fabricant: Intel Corporation
+          identifiant matériel: 100
+          information bus: pci@0000:00:00.0
+          version: 02
+          bits: 32 bits
+          horloge: 33MHz
+        *-isa
+             description: ISA bridge
+             produit: 82371SB PIIX3 ISA [Natoma/Triton II]
+             fabricant: Intel Corporation
+             identifiant matériel: 1
+             information bus: pci@0000:00:01.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: isa bus_master
+             configuration : latency=0
+        *-ide
+             description: IDE interface
+             produit: 82371AB/EB/MB PIIX4 IDE
+             fabricant: Intel Corporation
+             identifiant matériel: 1.1
+             information bus: pci@0000:00:01.1
+             version: 01
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ide isa_compat_mode pci_native_mode bus_master
+             configuration : driver=ata_piix latency=64
+             ressources : irq:0 portE/S:1f0(taille=8) portE/S:3f6 portE/S:170(taille=8) portE/S:376 portE/S:d000(taille=16)
+        *-display
+             description: VGA compatible controller
+             produit: SVGA II Adapter
+             fabricant: VMware
+             identifiant matériel: 2
+             information bus: pci@0000:00:02.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: vga_controller bus_master rom
+             configuration : driver=vmwgfx latency=64
+             ressources : irq:18 portE/S:d010(taille=16) mémoire:e0000000-e0ffffff mémoire:f0000000-f01fffff mémoire:c0000-dffff
+        *-network
+             description: Ethernet interface
+             produit: 82540EM Gigabit Ethernet Controller
+             fabricant: Intel Corporation
+             identifiant matériel: 3
+             information bus: pci@0000:00:03.0
+             nom logique: enp0s3
+             version: 02
+             numéro de série: 08:00:27:6f:3e:0f
+             taille: 1Gbit/s
+             capacité: 1Gbit/s
+             bits: 32 bits
+             horloge: 66MHz
+             fonctionnalités: pm pcix bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration : autonegotiation=on broadcast=yes driver=e1000 driverversion=7.3.21-k8-NAPI duplex=full ip=10.0.2.15 latency=64 link=yes mingnt=255 multicast=yes port=twisted pair speed=1Gbit/s
+             ressources : irq:19 mémoire:f0200000-f021ffff portE/S:d020(taille=8)
+        *-generic
+             description: System peripheral
+             produit: VirtualBox Guest Service
+             fabricant: InnoTek Systemberatung GmbH
+             identifiant matériel: 4
+             information bus: pci@0000:00:04.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             configuration : driver=vboxguest latency=0
+             ressources : irq:20 portE/S:d040(taille=32) mémoire:f0400000-f07fffff mémoire:f0800000-f0803fff
+        *-multimedia
+             description: Multimedia audio controller
+             produit: 82801AA AC'97 Audio Controller
+             fabricant: Intel Corporation
+             identifiant matériel: 5
+             information bus: pci@0000:00:05.0
+             version: 01
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: bus_master
+             configuration : driver=snd_intel8x0 latency=64
+             ressources : irq:21 portE/S:d100(taille=256) portE/S:d200(taille=64)
+        *-usb
+             description: USB controller
+             produit: KeyLargo/Intrepid USB
+             fabricant: Apple Inc.
+             identifiant matériel: 6
+             information bus: pci@0000:00:06.0
+             version: 00
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: ohci bus_master cap_list
+             configuration : driver=ohci-pci latency=64
+             ressources : irq:22 mémoire:f0804000-f0804fff
+           *-usbhost
+                produit: OHCI PCI host controller
+                fabricant: Linux 5.8.0-44-generic ohci_hcd
+                identifiant matériel: 1
+                information bus: usb@1
+                nom logique: usb1
+                version: 5.08
+                fonctionnalités: usb-1.10
+                configuration : driver=hub slots=12 speed=12Mbit/s
+              *-usb
+                   description: Périphérique d'interface homme/machine
+                   produit: USB Tablet
+                   fabricant: VirtualBox
+                   identifiant matériel: 1
+                   information bus: usb@1:1
+                   version: 1.00
+                   fonctionnalités: usb-1.10
+                   configuration : driver=usbhid maxpower=100mA speed=12Mbit/s
+        *-bridge
+             description: Bridge
+             produit: 82371AB/EB/MB PIIX4 ACPI
+             fabricant: Intel Corporation
+             identifiant matériel: 7
+             information bus: pci@0000:00:07.0
+             version: 08
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: bridge
+             configuration : driver=piix4_smbus latency=0
+             ressources : irq:9
+        *-sata
+             description: SATA controller
+             produit: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+             fabricant: Intel Corporation
+             identifiant matériel: d
+             information bus: pci@0000:00:0d.0
+             version: 02
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: sata pm ahci_1.0 bus_master cap_list
+             configuration : driver=ahci latency=64
+             ressources : irq:21 portE/S:d240(taille=8) portE/S:d248(taille=4) portE/S:d250(taille=8) portE/S:d258(taille=4) portE/S:d260(taille=16) mémoire:f0806000-f0807fff
+     *-pnp00:00
+          produit: PnP device PNP0303
+          identifiant matériel: 3
+          fonctionnalités: pnp
+          configuration : driver=i8042 kbd
+     *-pnp00:01
+          produit: PnP device PNP0f03
+          identifiant matériel: 4
+          fonctionnalités: pnp
+          configuration : driver=i8042 aux
+     *-scsi:0
+          identifiant matériel: 5
+          nom logique: scsi1
+          fonctionnalités: emulated
+        *-cdrom
+             description: DVD reader
+             produit: CD-ROM
+             fabricant: VBOX
+             identifiant matériel: 0.0.0
+             information bus: scsi@1:0.0.0
+             nom logique: /dev/cdrom
+             nom logique: /dev/dvd
+             nom logique: /dev/sr0
+             version: 1.0
+             fonctionnalités: removable audio dvd
+             configuration : ansiversion=5 status=nodisc
+     *-scsi:1
+          identifiant matériel: 6
+          nom logique: scsi2
+          fonctionnalités: emulated
+        *-disk
+             description: ATA Disk
+             produit: VBOX HARDDISK
+             fabricant: VirtualBox
+             identifiant matériel: 0.0.0
+             information bus: scsi@2:0.0.0
+             nom logique: /dev/sda
+             version: 1.0
+             numéro de série: VBc2aaa4ea-300be1b1
+             taille: 10GiB (10GB)
+             fonctionnalités: gpt-1.00 partitioned partitioned:gpt
+             configuration : ansiversion=5 guid=57478c06-ab3e-4b88-9177-da5f9121978f logicalsectorsize=512 sectorsize=512
+           *-volume:0
+                description: BIOS Boot partition
+                fabricant: EFI
+                identifiant matériel: 1
+                information bus: scsi@2:0.0.0,1
+                nom logique: /dev/sda1
+                numéro de série: 1b86a2a6-dc92-4ca1-9e7e-e857720f2bbe
+                capacité: 1023KiB
+                fonctionnalités: nofs
+           *-volume:1
+                description: Windows FAT volume
+                fabricant: mkfs.fat
+                identifiant matériel: 2
+                information bus: scsi@2:0.0.0,2
+                nom logique: /dev/sda2
+                nom logique: /boot/efi
+                version: FAT32
+                numéro de série: 2926-0556
+                taille: 510MiB
+                capacité: 512MiB
+                fonctionnalités: boot fat initialized
+                configuration : FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro name=EFI System Partition state=mounted
+           *-volume:2
+                description: Volume EXT4
+                fabricant: Linux
+                identifiant matériel: 3
+                information bus: scsi@2:0.0.0,3
+                nom logique: /dev/sda3
+                nom logique: /
+                version: 1.0
+                numéro de série: 9c583c18-8617-484e-9885-bc24836ffdfb
+                taille: 9724MiB
+                fonctionnalités: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                configuration : created=2021-02-10 22:39:30 filesystem=ext4 lastmountpoint=/ modified=2021-03-19 19:15:31 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2021-03-19 19:15:32 state=mounted
